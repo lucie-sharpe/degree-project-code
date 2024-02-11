@@ -1,0 +1,105 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2.1 (win64) Build 4081461 Thu Dec 14 12:24:51 MST 2023
+| Date         : Tue Feb  6 11:22:35 2024
+| Host         : CallumsLaptop running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file board_control_sets_placed.rpt
+| Design       : board
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    27 |
+|    Minimum number of control sets                        |    27 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   189 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    27 |
+| >= 0 to < 4        |    27 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     0 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |              18 |           18 |
+| No           | Yes                   | No                     |               9 |            9 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------------------------+---------------+------------------------------------------------------------+------------------+----------------+--------------+
+|                         Clock Signal                        | Enable Signal |                      Set/Reset Signal                      | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------------------------------+---------------+------------------------------------------------------------+------------------+----------------+--------------+
+|  genblk1[2].genblk1[0].cell_module/state_reg_LDC_i_1__1_n_0 |               | genblk1[2].genblk1[0].cell_module/state_reg_LDC_i_2__4_n_0 |                1 |              1 |         1.00 |
+|  genblk1[1].genblk1[2].cell_module/state_reg_LDC_i_1__2_n_0 |               | genblk1[1].genblk1[2].cell_module/state_reg_LDC_i_2__1_n_0 |                1 |              1 |         1.00 |
+|  genblk1[2].genblk1[2].cell_module/state_reg_LDC_i_1_n_0    |               | genblk1[2].genblk1[2].cell_module/state_reg_LDC_i_2__7_n_0 |                1 |              1 |         1.00 |
+|  genblk1[2].genblk1[1].cell_module/state_reg_LDC_i_1__0_n_0 |               | genblk1[2].genblk1[1].cell_module/state_reg_LDC_i_2__3_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[2].genblk1[0].cell_module/state_reg_LDC_i_1__1_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[2].genblk1[0].cell_module/state_reg_LDC_i_2__4_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[1].genblk1[2].cell_module/state_reg_LDC_i_2__1_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[1].genblk1[2].cell_module/state_reg_LDC_i_1__2_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[2].genblk1[2].cell_module/state_reg_LDC_i_1_n_0    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[2].genblk1[2].cell_module/state_reg_LDC_i_2__7_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[2].genblk1[1].cell_module/state_reg_LDC_i_2__3_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[2].genblk1[1].cell_module/state_reg_LDC_i_1__0_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[0].genblk1[0].cell_module/state_reg_LDC_i_1__7_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[0].genblk1[0].cell_module/state_reg_LDC_i_2__6_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[0].genblk1[1].cell_module/state_reg_LDC_i_2_n_0    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[0].genblk1[1].cell_module/state_reg_LDC_i_1__6_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[0].genblk1[2].cell_module/state_reg_LDC_i_1__5_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[0].genblk1[2].cell_module/state_reg_LDC_i_2__0_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[1].genblk1[0].cell_module/state_reg_LDC_i_1__4_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[1].genblk1[1].cell_module/state_reg_LDC_i_1__3_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[1].genblk1[1].cell_module/state_reg_LDC_i_2__2_n_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                              |               | genblk1[1].genblk1[0].cell_module/state_reg_LDC_i_2__5_n_0 |                1 |              1 |         1.00 |
+|  genblk1[0].genblk1[0].cell_module/state_reg_LDC_i_1__7_n_0 |               | genblk1[0].genblk1[0].cell_module/state_reg_LDC_i_2__6_n_0 |                1 |              1 |         1.00 |
+|  genblk1[0].genblk1[1].cell_module/state_reg_LDC_i_1__6_n_0 |               | genblk1[0].genblk1[1].cell_module/state_reg_LDC_i_2_n_0    |                1 |              1 |         1.00 |
+|  genblk1[0].genblk1[2].cell_module/state_reg_LDC_i_1__5_n_0 |               | genblk1[0].genblk1[2].cell_module/state_reg_LDC_i_2__0_n_0 |                1 |              1 |         1.00 |
+|  genblk1[1].genblk1[0].cell_module/state_reg_LDC_i_1__4_n_0 |               | genblk1[1].genblk1[0].cell_module/state_reg_LDC_i_2__5_n_0 |                1 |              1 |         1.00 |
+|  genblk1[1].genblk1[1].cell_module/state_reg_LDC_i_1__3_n_0 |               | genblk1[1].genblk1[1].cell_module/state_reg_LDC_i_2__2_n_0 |                1 |              1 |         1.00 |
++-------------------------------------------------------------+---------------+------------------------------------------------------------+------------------+----------------+--------------+
+
+
