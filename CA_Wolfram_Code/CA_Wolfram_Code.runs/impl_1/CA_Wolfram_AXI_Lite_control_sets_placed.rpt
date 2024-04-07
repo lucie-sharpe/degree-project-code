@@ -1,0 +1,221 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
+| Date         : Thu Mar  7 11:51:51 2024
+| Host         : CallumsLaptop running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file CA_Wolfram_AXI_Lite_control_sets_placed.rpt
+| Design       : CA_Wolfram_AXI_Lite
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   143 |
+|    Minimum number of control sets                        |   143 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    10 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   143 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |   135 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               6 |            3 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |            1062 |          446 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            1186 |          982 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+---------------------------------------------+---------------------------------------------+------------------+----------------+--------------+
+|       Clock Signal      |                Enable Signal                |               Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------+---------------------------------------------+---------------------------------------------+------------------+----------------+--------------+
+|  s00_axi_aclk_IBUF_BUFG |                                             |                                             |                3 |              6 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG |                                             | AXI_Lite_S00_AXI_inst/axi_wready_i_1_n_0    |                3 |              6 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/axi_awready0          | AXI_Lite_S00_AXI_inst/axi_wready_i_1_n_0    |                3 |              7 |         2.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg9[31]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg9[7]_i_1_n_0   | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg7[31]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg11[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg11[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg12[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg12[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg0[15]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg12[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg11[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg0[23]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                5 |              8 |         1.60 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg10[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg10[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg10[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg0[7]_i_1_n_0   | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg10[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg0[31]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg11[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg21[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg21[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg23[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg24[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg15[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg22[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg24[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg13[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg17[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg18[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg1[31]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg23[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg16[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg1[15]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                5 |              8 |         1.60 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg14[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg21[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg24[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg14[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg19[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg19[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg22[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg25[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg24[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg13[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg14[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg16[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg17[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg18[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg13[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg16[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg18[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg19[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg20[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg22[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg15[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg1[23]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg23[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg25[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg25[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg25[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg14[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg16[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg15[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg17[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                5 |              8 |         1.60 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg19[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg17[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg15[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg18[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg20[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg21[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg22[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg23[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg12[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg13[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg1[7]_i_1_n_0   | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg20[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg20[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg27[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg28[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg29[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg28[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg2[23]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg27[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg2[7]_i_1_n_0   | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg26[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg31[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg4[7]_i_1_n_0   | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg29[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg2[31]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg3[31]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg4[31]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg30[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg5[15]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg4[23]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg30[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg27[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg30[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg29[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg5[7]_i_1_n_0   | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg30[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg26[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg2[15]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg27[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg3[15]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg3[23]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg31[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg3[7]_i_1_n_0   | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg4[15]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg5[31]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg64[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                2 |              8 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_2_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                2 |              8 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg31[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg64[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                2 |              8 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg64[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                2 |              8 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg5[23]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg26[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg28[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg29[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg26[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg28[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg31[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg65[23]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                3 |              8 |         2.67 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg65[31]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                1 |              8 |         8.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg65[15]_i_1_n_0 | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                3 |              8 |         2.67 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg6[7]_i_1_n_0   | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg6[31]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg6[23]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg8[15]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg7[23]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg7[7]_i_1_n_0   | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg8[31]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg6[15]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg7[15]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg8[23]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg8[7]_i_1_n_0   | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                8 |              8 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg9[15]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg9[23]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/axi_arready0          | AXI_Lite_S00_AXI_inst/axi_wready_i_1_n_0    |                6 |             13 |         2.17 |
+|  s00_axi_aclk_IBUF_BUFG |                                             | AXI_Lite_S00_AXI_inst/gen_count[0]_i_1_n_0  |                8 |             32 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg_rden          | AXI_Lite_S00_AXI_inst/axi_wready_i_1_n_0    |               15 |             32 |         2.13 |
+|  s00_axi_aclk_IBUF_BUFG | AXI_Lite_S00_AXI_inst/slv_reg65[7]_i_1_n_0  | AXI_Lite_S00_AXI_inst/slv_reg64[31]_i_1_n_0 |               30 |             54 |         1.80 |
+|  s00_axi_aclk_IBUF_BUFG |                                             | AXI_Lite_S00_AXI_inst/rst_board_reg_n_0     |              435 |           1024 |         2.35 |
++-------------------------+---------------------------------------------+---------------------------------------------+------------------+----------------+--------------+
+
+

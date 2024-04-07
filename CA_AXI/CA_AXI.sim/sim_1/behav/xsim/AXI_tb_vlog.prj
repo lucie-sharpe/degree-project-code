@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../CA_AXI.srcs/sources_1/imports/hdl/CA_IP_v1_0_S00_AXI.v" \
+"../../../../CA_AXI.srcs/sources_1/imports/new/board.v" \
+"../../../../CA_AXI.srcs/sources_1/imports/new/board_cell.v" \
+"../../../../CA_AXI.srcs/sim_1/new/AXI_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -18,13 +18,13 @@ int main(void) {
 	volatile uint32_t data;
 	REG * reg = (REG *)AXI_BASEADDRESS;
 
-	kprintf("reg2 = %d\n", reg->reg2);
-
-	for (data = 0; data <= 0xFFFF; data++) {
-		reg->reg0 = data;
-		kprintf("Input: %d - ShiftReg0: %d - ShiftReg1+300: %d\n", reg->reg1, reg->reg3);
-
-		for (Delay = 0; Delay < DELAY; Delay++);
-	}
-
+	kprintf("reg3 = %d\n", reg->reg3);
+    reg->reg0 = 10;
+    kprintf("reg3 = %d\n", reg->reg3);
+    reg->reg2 = 4;
+    kprintf("reg3 = %d\n", reg->reg3);
+    reg->reg1 = 7;
+    kprintf("reg3 = %d\n", reg->reg3);
+    
+    kprintf("reg0 = %d, reg1 = %d, reg2 = %d, reg3 = %d\n", reg->reg0, reg->reg1, reg->reg2, reg->reg3);
 }

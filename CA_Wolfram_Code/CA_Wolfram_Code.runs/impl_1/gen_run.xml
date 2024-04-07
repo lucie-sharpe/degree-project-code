@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1709811801">
+  <File Type="ROUTE-PWR" Name="CA_Wolfram_AXI_Lite_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="CA_Wolfram_AXI_Lite.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="CA_Wolfram_AXI_Lite_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="CA_Wolfram_AXI_Lite_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="CA_Wolfram_AXI_Lite_rqa_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="CA_Wolfram_AXI_Lite.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="CA_Wolfram_AXI_Lite_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="CA_Wolfram_AXI_Lite_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="CA_Wolfram_AXI_Lite_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="CA_Wolfram_AXI_Lite_opt.dcp"/>
+  <File Type="OPT-DRC" Name="CA_Wolfram_AXI_Lite_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="CA_Wolfram_AXI_Lite.hwdef"/>
+  <File Type="PWROPT-DCP" Name="CA_Wolfram_AXI_Lite_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="CA_Wolfram_AXI_Lite_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="CA_Wolfram_AXI_Lite_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="CA_Wolfram_AXI_Lite_placed.dcp"/>
+  <File Type="PLACE-IO" Name="CA_Wolfram_AXI_Lite_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="CA_Wolfram_AXI_Lite_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="CA_Wolfram_AXI_Lite_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="CA_Wolfram_AXI_Lite_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="CA_Wolfram_AXI_Lite_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="CA_Wolfram_AXI_Lite_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="CA_Wolfram_AXI_Lite_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="CA_Wolfram_AXI_Lite.bin"/>
+  <File Type="PLACE-TIMING" Name="CA_Wolfram_AXI_Lite_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="CA_Wolfram_AXI_Lite_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="CA_Wolfram_AXI_Lite_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="CA_Wolfram_AXI_Lite_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="CA_Wolfram_AXI_Lite.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="CA_Wolfram_AXI_Lite_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="CA_Wolfram_AXI_Lite_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="CA_Wolfram_AXI_Lite_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="CA_Wolfram_AXI_Lite.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="CA_Wolfram_AXI_Lite_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="CA_Wolfram_AXI_Lite_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="CA_Wolfram_AXI_Lite_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="CA_Wolfram_AXI_Lite_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="CA_Wolfram_AXI_Lite_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="CA_Wolfram_AXI_Lite_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="CA_Wolfram_AXI_Lite_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="CA_Wolfram_AXI_Lite_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="CA_Wolfram_AXI_Lite_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="CA_Wolfram_AXI_Lite_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="CA_Wolfram_AXI_Lite_rqs_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="CA_Wolfram_AXI_Lite_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="CA_Wolfram_AXI_Lite_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="CA_Wolfram_AXI_Lite_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="CA_Wolfram_AXI_Lite_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="CA_Wolfram_AXI_Lite_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="CA_Wolfram_AXI_Lite_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="CA_Wolfram_AXI_Lite_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="CA_Wolfram_AXI_Lite_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="CA_Wolfram_AXI_Lite_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="CA_Wolfram_AXI_Lite_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="CA_Wolfram_AXI_Lite_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="CA_Wolfram_AXI_Lite_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="CA_Wolfram_AXI_Lite_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="CA_Wolfram_AXI_Lite_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="CA_Wolfram_AXI_Lite_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="CA_Wolfram_AXI_Lite_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="CA_Wolfram_AXI_Lite.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="CA_Wolfram_AXI_Lite_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="CA_Wolfram_AXI_Lite_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="CA_Wolfram_AXI_Lite.nky"/>
+  <File Type="BITSTR-BMM" Name="CA_Wolfram_AXI_Lite_bd.bmm"/>
+  <File Type="PDI-FILE" Name="CA_Wolfram_AXI_Lite.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="CA_Wolfram_AXI_Lite_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="CA_Wolfram_AXI_Lite_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="CA_Wolfram_AXI_Lite.rcfi"/>
+  <File Type="CFI_FILE" Name="CA_Wolfram_AXI_Lite.cfi"/>
+  <File Type="RNPI_FILE" Name="CA_Wolfram_AXI_Lite.rnpi"/>
+  <File Type="NPI_FILE" Name="CA_Wolfram_AXI_Lite.npi"/>
+  <File Type="RBD_FILE" Name="CA_Wolfram_AXI_Lite.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="CA_Wolfram_AXI_Lite.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="CA_Wolfram_AXI_Lite.sysdef"/>
+  <File Type="BG-BGN" Name="CA_Wolfram_AXI_Lite.bgn"/>
+  <File Type="BG-DRC" Name="CA_Wolfram_AXI_Lite.drc"/>
+  <File Type="RDI-RDI" Name="CA_Wolfram_AXI_Lite.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="CA_Wolfram_AXI_Lite_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="CA_Wolfram_AXI_Lite_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/AXI_Lite_S00_AXI_inst.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/imports/CA/board.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CA_AXI_32x32/CA_AXI_32x32.srcs/sources_1/imports/CA/board.v"/>
+        <Attr Name="ImportTime" Val="1708957446"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/imports/CA/board_cell.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CA_AXI_32x32/CA_AXI_32x32.srcs/sources_1/imports/CA/board_cell.v"/>
+        <Attr Name="ImportTime" Val="1707755480"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CA_Wolfram_AXI_Lite.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="CA_Wolfram_AXI_Lite"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/CA_Wolfram_AXI_Lite.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

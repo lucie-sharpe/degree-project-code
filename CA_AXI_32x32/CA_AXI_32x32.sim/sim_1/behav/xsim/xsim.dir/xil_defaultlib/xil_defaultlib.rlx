@@ -1,0 +1,10 @@
+0.7
+2020.2
+Feb  9 2024
+00:36:40
+M:/Uni/Modules/CS351_Proj/cs351-code/CA_AXI_32x32/CA_AXI_32x32.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+M:/Uni/Modules/CS351_Proj/cs351-code/CA_AXI_32x32/CA_AXI_32x32.srcs/sim_1/new/AXI_tb.v,1709507988,verilog,,,,AXI_tb,,,,,,,,
+M:/Uni/Modules/CS351_Proj/cs351-code/CA_AXI_32x32/CA_AXI_32x32.srcs/sources_1/imports/AXI/AXI_Lite_65.v,1708349345,verilog,,M:/Uni/Modules/CS351_Proj/cs351-code/CA_AXI_32x32/CA_AXI_32x32.srcs/sim_1/new/AXI_tb.v,,AXI_Lite_65,,,,,,,,
+M:/Uni/Modules/CS351_Proj/cs351-code/CA_AXI_32x32/CA_AXI_32x32.srcs/sources_1/imports/AXI/AXI_Lite_65_S00_AXI.v,1709371986,verilog,,M:/Uni/Modules/CS351_Proj/cs351-code/CA_AXI_32x32/CA_AXI_32x32.srcs/sources_1/imports/AXI/AXI_Lite_65.v,,AXI_Lite_65_S00_AXI,,,,,,,,
+M:/Uni/Modules/CS351_Proj/cs351-code/CA_AXI_32x32/CA_AXI_32x32.srcs/sources_1/imports/CA/board.v,1709045802,verilog,,M:/Uni/Modules/CS351_Proj/cs351-code/CA_AXI_32x32/CA_AXI_32x32.srcs/sources_1/imports/CA/board_cell.v,,board,,,,,,,,
+M:/Uni/Modules/CS351_Proj/cs351-code/CA_AXI_32x32/CA_AXI_32x32.srcs/sources_1/imports/CA/board_cell.v,1707755480,verilog,,M:/Uni/Modules/CS351_Proj/cs351-code/CA_AXI_32x32/CA_AXI_32x32.srcs/sources_1/imports/AXI/AXI_Lite_65_S00_AXI.v,,board_cell,,,,,,,,

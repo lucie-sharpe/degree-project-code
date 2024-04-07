@@ -1,0 +1,1171 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
+| Date             : Thu Mar  7 11:53:21 2024
+| Host             : CallumsLaptop running 64-bit major release  (build 9200)
+| Command          : report_power -file CA_Wolfram_AXI_Lite_power_routed.rpt -pb CA_Wolfram_AXI_Lite_power_summary_routed.pb -rpx CA_Wolfram_AXI_Lite_power_routed.rpx
+| Design           : CA_Wolfram_AXI_Lite
+| Device           : xc7a100tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 57.944 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                     |
+| Power Budget Margin (W)  | NA                               |
+| Dynamic (W)              | 57.154                           |
+| Device Static (W)        | 0.791                            |
+| Effective TJA (C/W)      | 4.6                              |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 125.0                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Slice Logic    |    26.097 |     8643 |       --- |             --- |
+|   LUT as Logic |    23.279 |     3906 |     63400 |            6.16 |
+|   F7/F8 Muxes  |     1.722 |     1406 |     63400 |            2.22 |
+|   Register     |     1.025 |     2254 |    126800 |            1.78 |
+|   CARRY4       |     0.065 |        8 |     15850 |            0.05 |
+|   BUFG         |     0.006 |        1 |        32 |            3.13 |
+|   Others       |     0.000 |     1027 |       --- |             --- |
+| Signals        |    27.763 |     3733 |       --- |             --- |
+| I/O            |     3.294 |       98 |       210 |           46.67 |
+| Static Power   |     0.791 |          |           |                 |
+| Total          |    57.944 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |    54.646 |      54.084 |      0.563 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.344 |       0.251 |      0.093 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     1.458 |       1.454 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------------+-----------+
+| Name                            | Power (W) |
++---------------------------------+-----------+
+| CA_Wolfram_AXI_Lite             |    57.154 |
+|   AXI_Lite_S00_AXI_inst         |    52.104 |
+|     board_module                |    50.331 |
+|       genblk1[0].cell_module    |     0.013 |
+|       genblk1[1000].cell_module |     0.056 |
+|       genblk1[1001].cell_module |     0.057 |
+|       genblk1[1002].cell_module |     0.059 |
+|       genblk1[1003].cell_module |     0.055 |
+|       genblk1[1004].cell_module |     0.060 |
+|       genblk1[1005].cell_module |     0.066 |
+|       genblk1[1006].cell_module |     0.056 |
+|       genblk1[1007].cell_module |     0.055 |
+|       genblk1[1008].cell_module |     0.056 |
+|       genblk1[1009].cell_module |     0.053 |
+|       genblk1[100].cell_module  |     0.066 |
+|       genblk1[1010].cell_module |     0.059 |
+|       genblk1[1011].cell_module |     0.056 |
+|       genblk1[1012].cell_module |     0.050 |
+|       genblk1[1013].cell_module |     0.057 |
+|       genblk1[1014].cell_module |     0.048 |
+|       genblk1[1015].cell_module |     0.058 |
+|       genblk1[1016].cell_module |     0.060 |
+|       genblk1[1017].cell_module |     0.059 |
+|       genblk1[1018].cell_module |     0.048 |
+|       genblk1[1019].cell_module |     0.053 |
+|       genblk1[101].cell_module  |     0.073 |
+|       genblk1[1020].cell_module |     0.053 |
+|       genblk1[1021].cell_module |     0.058 |
+|       genblk1[1022].cell_module |     0.050 |
+|       genblk1[1023].cell_module |     0.064 |
+|       genblk1[102].cell_module  |     0.069 |
+|       genblk1[103].cell_module  |     0.069 |
+|       genblk1[104].cell_module  |     0.068 |
+|       genblk1[105].cell_module  |     0.079 |
+|       genblk1[106].cell_module  |     0.067 |
+|       genblk1[107].cell_module  |     0.062 |
+|       genblk1[108].cell_module  |     0.070 |
+|       genblk1[109].cell_module  |     0.073 |
+|       genblk1[10].cell_module   |     0.042 |
+|       genblk1[110].cell_module  |     0.069 |
+|       genblk1[111].cell_module  |     0.072 |
+|       genblk1[112].cell_module  |     0.069 |
+|       genblk1[113].cell_module  |     0.061 |
+|       genblk1[114].cell_module  |     0.069 |
+|       genblk1[115].cell_module  |     0.072 |
+|       genblk1[116].cell_module  |     0.069 |
+|       genblk1[117].cell_module  |     0.066 |
+|       genblk1[118].cell_module  |     0.072 |
+|       genblk1[119].cell_module  |     0.073 |
+|       genblk1[11].cell_module   |     0.043 |
+|       genblk1[120].cell_module  |     0.064 |
+|       genblk1[121].cell_module  |     0.061 |
+|       genblk1[122].cell_module  |     0.069 |
+|       genblk1[123].cell_module  |     0.064 |
+|       genblk1[124].cell_module  |     0.074 |
+|       genblk1[125].cell_module  |     0.074 |
+|       genblk1[126].cell_module  |     0.061 |
+|       genblk1[127].cell_module  |     0.069 |
+|       genblk1[128].cell_module  |     0.046 |
+|       genblk1[129].cell_module  |     0.043 |
+|       genblk1[12].cell_module   |     0.046 |
+|       genblk1[130].cell_module  |     0.044 |
+|       genblk1[131].cell_module  |     0.040 |
+|       genblk1[132].cell_module  |     0.042 |
+|       genblk1[133].cell_module  |     0.046 |
+|       genblk1[134].cell_module  |     0.044 |
+|       genblk1[135].cell_module  |     0.042 |
+|       genblk1[136].cell_module  |     0.046 |
+|       genblk1[137].cell_module  |     0.048 |
+|       genblk1[138].cell_module  |     0.045 |
+|       genblk1[139].cell_module  |     0.046 |
+|       genblk1[13].cell_module   |     0.040 |
+|       genblk1[140].cell_module  |     0.041 |
+|       genblk1[141].cell_module  |     0.054 |
+|       genblk1[142].cell_module  |     0.036 |
+|       genblk1[143].cell_module  |     0.040 |
+|       genblk1[144].cell_module  |     0.048 |
+|       genblk1[145].cell_module  |     0.053 |
+|       genblk1[146].cell_module  |     0.048 |
+|       genblk1[147].cell_module  |     0.037 |
+|       genblk1[148].cell_module  |     0.046 |
+|       genblk1[149].cell_module  |     0.034 |
+|       genblk1[14].cell_module   |     0.045 |
+|       genblk1[150].cell_module  |     0.044 |
+|       genblk1[151].cell_module  |     0.049 |
+|       genblk1[152].cell_module  |     0.046 |
+|       genblk1[153].cell_module  |     0.038 |
+|       genblk1[154].cell_module  |     0.050 |
+|       genblk1[155].cell_module  |     0.043 |
+|       genblk1[156].cell_module  |     0.045 |
+|       genblk1[157].cell_module  |     0.044 |
+|       genblk1[158].cell_module  |     0.048 |
+|       genblk1[159].cell_module  |     0.043 |
+|       genblk1[15].cell_module   |     0.047 |
+|       genblk1[160].cell_module  |     0.046 |
+|       genblk1[161].cell_module  |     0.041 |
+|       genblk1[162].cell_module  |     0.048 |
+|       genblk1[163].cell_module  |     0.056 |
+|       genblk1[164].cell_module  |     0.047 |
+|       genblk1[165].cell_module  |     0.046 |
+|       genblk1[166].cell_module  |     0.037 |
+|       genblk1[167].cell_module  |     0.045 |
+|       genblk1[168].cell_module  |     0.050 |
+|       genblk1[169].cell_module  |     0.034 |
+|       genblk1[16].cell_module   |     0.044 |
+|       genblk1[170].cell_module  |     0.042 |
+|       genblk1[171].cell_module  |     0.043 |
+|       genblk1[172].cell_module  |     0.046 |
+|       genblk1[173].cell_module  |     0.047 |
+|       genblk1[174].cell_module  |     0.048 |
+|       genblk1[175].cell_module  |     0.049 |
+|       genblk1[176].cell_module  |     0.046 |
+|       genblk1[177].cell_module  |     0.048 |
+|       genblk1[178].cell_module  |     0.044 |
+|       genblk1[179].cell_module  |     0.052 |
+|       genblk1[17].cell_module   |     0.047 |
+|       genblk1[180].cell_module  |     0.037 |
+|       genblk1[181].cell_module  |     0.052 |
+|       genblk1[182].cell_module  |     0.051 |
+|       genblk1[183].cell_module  |     0.052 |
+|       genblk1[184].cell_module  |     0.044 |
+|       genblk1[185].cell_module  |     0.043 |
+|       genblk1[186].cell_module  |     0.039 |
+|       genblk1[187].cell_module  |     0.040 |
+|       genblk1[188].cell_module  |     0.041 |
+|       genblk1[189].cell_module  |     0.044 |
+|       genblk1[18].cell_module   |     0.040 |
+|       genblk1[190].cell_module  |     0.050 |
+|       genblk1[191].cell_module  |     0.045 |
+|       genblk1[192].cell_module  |     0.049 |
+|       genblk1[193].cell_module  |     0.045 |
+|       genblk1[194].cell_module  |     0.041 |
+|       genblk1[195].cell_module  |     0.044 |
+|       genblk1[196].cell_module  |     0.049 |
+|       genblk1[197].cell_module  |     0.042 |
+|       genblk1[198].cell_module  |     0.038 |
+|       genblk1[199].cell_module  |     0.044 |
+|       genblk1[19].cell_module   |     0.040 |
+|       genblk1[1].cell_module    |     0.028 |
+|       genblk1[200].cell_module  |     0.043 |
+|       genblk1[201].cell_module  |     0.048 |
+|       genblk1[202].cell_module  |     0.046 |
+|       genblk1[203].cell_module  |     0.048 |
+|       genblk1[204].cell_module  |     0.048 |
+|       genblk1[205].cell_module  |     0.047 |
+|       genblk1[206].cell_module  |     0.053 |
+|       genblk1[207].cell_module  |     0.042 |
+|       genblk1[208].cell_module  |     0.042 |
+|       genblk1[209].cell_module  |     0.048 |
+|       genblk1[20].cell_module   |     0.041 |
+|       genblk1[210].cell_module  |     0.050 |
+|       genblk1[211].cell_module  |     0.047 |
+|       genblk1[212].cell_module  |     0.045 |
+|       genblk1[213].cell_module  |     0.049 |
+|       genblk1[214].cell_module  |     0.047 |
+|       genblk1[215].cell_module  |     0.050 |
+|       genblk1[216].cell_module  |     0.046 |
+|       genblk1[217].cell_module  |     0.050 |
+|       genblk1[218].cell_module  |     0.046 |
+|       genblk1[219].cell_module  |     0.043 |
+|       genblk1[21].cell_module   |     0.037 |
+|       genblk1[220].cell_module  |     0.044 |
+|       genblk1[221].cell_module  |     0.047 |
+|       genblk1[222].cell_module  |     0.041 |
+|       genblk1[223].cell_module  |     0.042 |
+|       genblk1[224].cell_module  |     0.050 |
+|       genblk1[225].cell_module  |     0.053 |
+|       genblk1[226].cell_module  |     0.054 |
+|       genblk1[227].cell_module  |     0.059 |
+|       genblk1[228].cell_module  |     0.053 |
+|       genblk1[229].cell_module  |     0.064 |
+|       genblk1[22].cell_module   |     0.041 |
+|       genblk1[230].cell_module  |     0.059 |
+|       genblk1[231].cell_module  |     0.051 |
+|       genblk1[232].cell_module  |     0.060 |
+|       genblk1[233].cell_module  |     0.059 |
+|       genblk1[234].cell_module  |     0.058 |
+|       genblk1[235].cell_module  |     0.054 |
+|       genblk1[236].cell_module  |     0.055 |
+|       genblk1[237].cell_module  |     0.051 |
+|       genblk1[238].cell_module  |     0.053 |
+|       genblk1[239].cell_module  |     0.059 |
+|       genblk1[23].cell_module   |     0.042 |
+|       genblk1[240].cell_module  |     0.064 |
+|       genblk1[241].cell_module  |     0.055 |
+|       genblk1[242].cell_module  |     0.057 |
+|       genblk1[243].cell_module  |     0.057 |
+|       genblk1[244].cell_module  |     0.053 |
+|       genblk1[245].cell_module  |     0.057 |
+|       genblk1[246].cell_module  |     0.045 |
+|       genblk1[247].cell_module  |     0.049 |
+|       genblk1[248].cell_module  |     0.054 |
+|       genblk1[249].cell_module  |     0.059 |
+|       genblk1[24].cell_module   |     0.042 |
+|       genblk1[250].cell_module  |     0.055 |
+|       genblk1[251].cell_module  |     0.049 |
+|       genblk1[252].cell_module  |     0.053 |
+|       genblk1[253].cell_module  |     0.055 |
+|       genblk1[254].cell_module  |     0.054 |
+|       genblk1[255].cell_module  |     0.047 |
+|       genblk1[256].cell_module  |     0.045 |
+|       genblk1[257].cell_module  |     0.046 |
+|       genblk1[258].cell_module  |     0.047 |
+|       genblk1[259].cell_module  |     0.044 |
+|       genblk1[25].cell_module   |     0.054 |
+|       genblk1[260].cell_module  |     0.042 |
+|       genblk1[261].cell_module  |     0.047 |
+|       genblk1[262].cell_module  |     0.049 |
+|       genblk1[263].cell_module  |     0.044 |
+|       genblk1[264].cell_module  |     0.043 |
+|       genblk1[265].cell_module  |     0.048 |
+|       genblk1[266].cell_module  |     0.049 |
+|       genblk1[267].cell_module  |     0.049 |
+|       genblk1[268].cell_module  |     0.044 |
+|       genblk1[269].cell_module  |     0.042 |
+|       genblk1[26].cell_module   |     0.045 |
+|       genblk1[270].cell_module  |     0.040 |
+|       genblk1[271].cell_module  |     0.056 |
+|       genblk1[272].cell_module  |     0.043 |
+|       genblk1[273].cell_module  |     0.048 |
+|       genblk1[274].cell_module  |     0.050 |
+|       genblk1[275].cell_module  |     0.041 |
+|       genblk1[276].cell_module  |     0.039 |
+|       genblk1[277].cell_module  |     0.043 |
+|       genblk1[278].cell_module  |     0.042 |
+|       genblk1[279].cell_module  |     0.042 |
+|       genblk1[27].cell_module   |     0.036 |
+|       genblk1[280].cell_module  |     0.046 |
+|       genblk1[281].cell_module  |     0.045 |
+|       genblk1[282].cell_module  |     0.045 |
+|       genblk1[283].cell_module  |     0.038 |
+|       genblk1[284].cell_module  |     0.045 |
+|       genblk1[285].cell_module  |     0.049 |
+|       genblk1[286].cell_module  |     0.042 |
+|       genblk1[287].cell_module  |     0.055 |
+|       genblk1[288].cell_module  |     0.043 |
+|       genblk1[289].cell_module  |     0.047 |
+|       genblk1[28].cell_module   |     0.043 |
+|       genblk1[290].cell_module  |     0.042 |
+|       genblk1[291].cell_module  |     0.048 |
+|       genblk1[292].cell_module  |     0.048 |
+|       genblk1[293].cell_module  |     0.046 |
+|       genblk1[294].cell_module  |     0.051 |
+|       genblk1[295].cell_module  |     0.047 |
+|       genblk1[296].cell_module  |     0.046 |
+|       genblk1[297].cell_module  |     0.042 |
+|       genblk1[298].cell_module  |     0.047 |
+|       genblk1[299].cell_module  |     0.039 |
+|       genblk1[29].cell_module   |     0.044 |
+|       genblk1[2].cell_module    |     0.046 |
+|       genblk1[300].cell_module  |     0.041 |
+|       genblk1[301].cell_module  |     0.037 |
+|       genblk1[302].cell_module  |     0.044 |
+|       genblk1[303].cell_module  |     0.049 |
+|       genblk1[304].cell_module  |     0.047 |
+|       genblk1[305].cell_module  |     0.051 |
+|       genblk1[306].cell_module  |     0.046 |
+|       genblk1[307].cell_module  |     0.051 |
+|       genblk1[308].cell_module  |     0.052 |
+|       genblk1[309].cell_module  |     0.046 |
+|       genblk1[30].cell_module   |     0.045 |
+|       genblk1[310].cell_module  |     0.042 |
+|       genblk1[311].cell_module  |     0.045 |
+|       genblk1[312].cell_module  |     0.042 |
+|       genblk1[313].cell_module  |     0.043 |
+|       genblk1[314].cell_module  |     0.044 |
+|       genblk1[315].cell_module  |     0.041 |
+|       genblk1[316].cell_module  |     0.048 |
+|       genblk1[317].cell_module  |     0.040 |
+|       genblk1[318].cell_module  |     0.045 |
+|       genblk1[319].cell_module  |     0.045 |
+|       genblk1[31].cell_module   |     0.045 |
+|       genblk1[320].cell_module  |     0.047 |
+|       genblk1[321].cell_module  |     0.047 |
+|       genblk1[322].cell_module  |     0.059 |
+|       genblk1[323].cell_module  |     0.047 |
+|       genblk1[324].cell_module  |     0.048 |
+|       genblk1[325].cell_module  |     0.036 |
+|       genblk1[326].cell_module  |     0.046 |
+|       genblk1[327].cell_module  |     0.046 |
+|       genblk1[328].cell_module  |     0.047 |
+|       genblk1[329].cell_module  |     0.042 |
+|       genblk1[32].cell_module   |     0.048 |
+|       genblk1[330].cell_module  |     0.044 |
+|       genblk1[331].cell_module  |     0.051 |
+|       genblk1[332].cell_module  |     0.045 |
+|       genblk1[333].cell_module  |     0.049 |
+|       genblk1[334].cell_module  |     0.044 |
+|       genblk1[335].cell_module  |     0.039 |
+|       genblk1[336].cell_module  |     0.045 |
+|       genblk1[337].cell_module  |     0.048 |
+|       genblk1[338].cell_module  |     0.050 |
+|       genblk1[339].cell_module  |     0.045 |
+|       genblk1[33].cell_module   |     0.039 |
+|       genblk1[340].cell_module  |     0.050 |
+|       genblk1[341].cell_module  |     0.039 |
+|       genblk1[342].cell_module  |     0.041 |
+|       genblk1[343].cell_module  |     0.054 |
+|       genblk1[344].cell_module  |     0.043 |
+|       genblk1[345].cell_module  |     0.039 |
+|       genblk1[346].cell_module  |     0.048 |
+|       genblk1[347].cell_module  |     0.053 |
+|       genblk1[348].cell_module  |     0.049 |
+|       genblk1[349].cell_module  |     0.049 |
+|       genblk1[34].cell_module   |     0.038 |
+|       genblk1[350].cell_module  |     0.050 |
+|       genblk1[351].cell_module  |     0.040 |
+|       genblk1[352].cell_module  |     0.054 |
+|       genblk1[353].cell_module  |     0.052 |
+|       genblk1[354].cell_module  |     0.057 |
+|       genblk1[355].cell_module  |     0.053 |
+|       genblk1[356].cell_module  |     0.053 |
+|       genblk1[357].cell_module  |     0.063 |
+|       genblk1[358].cell_module  |     0.058 |
+|       genblk1[359].cell_module  |     0.054 |
+|       genblk1[35].cell_module   |     0.046 |
+|       genblk1[360].cell_module  |     0.058 |
+|       genblk1[361].cell_module  |     0.051 |
+|       genblk1[362].cell_module  |     0.053 |
+|       genblk1[363].cell_module  |     0.057 |
+|       genblk1[364].cell_module  |     0.060 |
+|       genblk1[365].cell_module  |     0.051 |
+|       genblk1[366].cell_module  |     0.062 |
+|       genblk1[367].cell_module  |     0.061 |
+|       genblk1[368].cell_module  |     0.067 |
+|       genblk1[369].cell_module  |     0.057 |
+|       genblk1[36].cell_module   |     0.046 |
+|       genblk1[370].cell_module  |     0.055 |
+|       genblk1[371].cell_module  |     0.052 |
+|       genblk1[372].cell_module  |     0.052 |
+|       genblk1[373].cell_module  |     0.052 |
+|       genblk1[374].cell_module  |     0.057 |
+|       genblk1[375].cell_module  |     0.051 |
+|       genblk1[376].cell_module  |     0.064 |
+|       genblk1[377].cell_module  |     0.052 |
+|       genblk1[378].cell_module  |     0.058 |
+|       genblk1[379].cell_module  |     0.050 |
+|       genblk1[37].cell_module   |     0.051 |
+|       genblk1[380].cell_module  |     0.066 |
+|       genblk1[381].cell_module  |     0.059 |
+|       genblk1[382].cell_module  |     0.051 |
+|       genblk1[383].cell_module  |     0.061 |
+|       genblk1[384].cell_module  |     0.047 |
+|       genblk1[385].cell_module  |     0.037 |
+|       genblk1[386].cell_module  |     0.044 |
+|       genblk1[387].cell_module  |     0.046 |
+|       genblk1[388].cell_module  |     0.044 |
+|       genblk1[389].cell_module  |     0.048 |
+|       genblk1[38].cell_module   |     0.043 |
+|       genblk1[390].cell_module  |     0.043 |
+|       genblk1[391].cell_module  |     0.055 |
+|       genblk1[392].cell_module  |     0.040 |
+|       genblk1[393].cell_module  |     0.044 |
+|       genblk1[394].cell_module  |     0.043 |
+|       genblk1[395].cell_module  |     0.044 |
+|       genblk1[396].cell_module  |     0.040 |
+|       genblk1[397].cell_module  |     0.046 |
+|       genblk1[398].cell_module  |     0.045 |
+|       genblk1[399].cell_module  |     0.042 |
+|       genblk1[39].cell_module   |     0.044 |
+|       genblk1[3].cell_module    |     0.043 |
+|       genblk1[400].cell_module  |     0.047 |
+|       genblk1[401].cell_module  |     0.046 |
+|       genblk1[402].cell_module  |     0.048 |
+|       genblk1[403].cell_module  |     0.043 |
+|       genblk1[404].cell_module  |     0.051 |
+|       genblk1[405].cell_module  |     0.046 |
+|       genblk1[406].cell_module  |     0.043 |
+|       genblk1[407].cell_module  |     0.045 |
+|       genblk1[408].cell_module  |     0.048 |
+|       genblk1[409].cell_module  |     0.054 |
+|       genblk1[40].cell_module   |     0.042 |
+|       genblk1[410].cell_module  |     0.040 |
+|       genblk1[411].cell_module  |     0.055 |
+|       genblk1[412].cell_module  |     0.052 |
+|       genblk1[413].cell_module  |     0.036 |
+|       genblk1[414].cell_module  |     0.044 |
+|       genblk1[415].cell_module  |     0.037 |
+|       genblk1[416].cell_module  |     0.044 |
+|       genblk1[417].cell_module  |     0.041 |
+|       genblk1[418].cell_module  |     0.039 |
+|       genblk1[419].cell_module  |     0.046 |
+|       genblk1[41].cell_module   |     0.042 |
+|       genblk1[420].cell_module  |     0.048 |
+|       genblk1[421].cell_module  |     0.044 |
+|       genblk1[422].cell_module  |     0.048 |
+|       genblk1[423].cell_module  |     0.044 |
+|       genblk1[424].cell_module  |     0.045 |
+|       genblk1[425].cell_module  |     0.045 |
+|       genblk1[426].cell_module  |     0.049 |
+|       genblk1[427].cell_module  |     0.050 |
+|       genblk1[428].cell_module  |     0.049 |
+|       genblk1[429].cell_module  |     0.043 |
+|       genblk1[42].cell_module   |     0.037 |
+|       genblk1[430].cell_module  |     0.044 |
+|       genblk1[431].cell_module  |     0.046 |
+|       genblk1[432].cell_module  |     0.043 |
+|       genblk1[433].cell_module  |     0.052 |
+|       genblk1[434].cell_module  |     0.046 |
+|       genblk1[435].cell_module  |     0.045 |
+|       genblk1[436].cell_module  |     0.047 |
+|       genblk1[437].cell_module  |     0.043 |
+|       genblk1[438].cell_module  |     0.048 |
+|       genblk1[439].cell_module  |     0.041 |
+|       genblk1[43].cell_module   |     0.043 |
+|       genblk1[440].cell_module  |     0.046 |
+|       genblk1[441].cell_module  |     0.044 |
+|       genblk1[442].cell_module  |     0.041 |
+|       genblk1[443].cell_module  |     0.040 |
+|       genblk1[444].cell_module  |     0.047 |
+|       genblk1[445].cell_module  |     0.043 |
+|       genblk1[446].cell_module  |     0.044 |
+|       genblk1[447].cell_module  |     0.050 |
+|       genblk1[448].cell_module  |     0.042 |
+|       genblk1[449].cell_module  |     0.049 |
+|       genblk1[44].cell_module   |     0.044 |
+|       genblk1[450].cell_module  |     0.039 |
+|       genblk1[451].cell_module  |     0.037 |
+|       genblk1[452].cell_module  |     0.038 |
+|       genblk1[453].cell_module  |     0.045 |
+|       genblk1[454].cell_module  |     0.046 |
+|       genblk1[455].cell_module  |     0.048 |
+|       genblk1[456].cell_module  |     0.043 |
+|       genblk1[457].cell_module  |     0.046 |
+|       genblk1[458].cell_module  |     0.041 |
+|       genblk1[459].cell_module  |     0.050 |
+|       genblk1[45].cell_module   |     0.037 |
+|       genblk1[460].cell_module  |     0.048 |
+|       genblk1[461].cell_module  |     0.036 |
+|       genblk1[462].cell_module  |     0.047 |
+|       genblk1[463].cell_module  |     0.049 |
+|       genblk1[464].cell_module  |     0.047 |
+|       genblk1[465].cell_module  |     0.045 |
+|       genblk1[466].cell_module  |     0.044 |
+|       genblk1[467].cell_module  |     0.050 |
+|       genblk1[468].cell_module  |     0.039 |
+|       genblk1[469].cell_module  |     0.042 |
+|       genblk1[46].cell_module   |     0.045 |
+|       genblk1[470].cell_module  |     0.046 |
+|       genblk1[471].cell_module  |     0.037 |
+|       genblk1[472].cell_module  |     0.042 |
+|       genblk1[473].cell_module  |     0.047 |
+|       genblk1[474].cell_module  |     0.041 |
+|       genblk1[475].cell_module  |     0.043 |
+|       genblk1[476].cell_module  |     0.040 |
+|       genblk1[477].cell_module  |     0.045 |
+|       genblk1[478].cell_module  |     0.046 |
+|       genblk1[479].cell_module  |     0.050 |
+|       genblk1[47].cell_module   |     0.040 |
+|       genblk1[480].cell_module  |     0.057 |
+|       genblk1[481].cell_module  |     0.055 |
+|       genblk1[482].cell_module  |     0.050 |
+|       genblk1[483].cell_module  |     0.053 |
+|       genblk1[484].cell_module  |     0.052 |
+|       genblk1[485].cell_module  |     0.054 |
+|       genblk1[486].cell_module  |     0.050 |
+|       genblk1[487].cell_module  |     0.053 |
+|       genblk1[488].cell_module  |     0.052 |
+|       genblk1[489].cell_module  |     0.060 |
+|       genblk1[48].cell_module   |     0.046 |
+|       genblk1[490].cell_module  |     0.054 |
+|       genblk1[491].cell_module  |     0.062 |
+|       genblk1[492].cell_module  |     0.061 |
+|       genblk1[493].cell_module  |     0.054 |
+|       genblk1[494].cell_module  |     0.054 |
+|       genblk1[495].cell_module  |     0.050 |
+|       genblk1[496].cell_module  |     0.059 |
+|       genblk1[497].cell_module  |     0.058 |
+|       genblk1[498].cell_module  |     0.059 |
+|       genblk1[499].cell_module  |     0.054 |
+|       genblk1[49].cell_module   |     0.042 |
+|       genblk1[4].cell_module    |     0.042 |
+|       genblk1[500].cell_module  |     0.054 |
+|       genblk1[501].cell_module  |     0.053 |
+|       genblk1[502].cell_module  |     0.063 |
+|       genblk1[503].cell_module  |     0.056 |
+|       genblk1[504].cell_module  |     0.055 |
+|       genblk1[505].cell_module  |     0.048 |
+|       genblk1[506].cell_module  |     0.059 |
+|       genblk1[507].cell_module  |     0.057 |
+|       genblk1[508].cell_module  |     0.053 |
+|       genblk1[509].cell_module  |     0.056 |
+|       genblk1[50].cell_module   |     0.041 |
+|       genblk1[510].cell_module  |     0.049 |
+|       genblk1[511].cell_module  |     0.058 |
+|       genblk1[512].cell_module  |     0.049 |
+|       genblk1[513].cell_module  |     0.054 |
+|       genblk1[514].cell_module  |     0.050 |
+|       genblk1[515].cell_module  |     0.051 |
+|       genblk1[516].cell_module  |     0.049 |
+|       genblk1[517].cell_module  |     0.052 |
+|       genblk1[518].cell_module  |     0.048 |
+|       genblk1[519].cell_module  |     0.042 |
+|       genblk1[51].cell_module   |     0.039 |
+|       genblk1[520].cell_module  |     0.043 |
+|       genblk1[521].cell_module  |     0.047 |
+|       genblk1[522].cell_module  |     0.047 |
+|       genblk1[523].cell_module  |     0.048 |
+|       genblk1[524].cell_module  |     0.058 |
+|       genblk1[525].cell_module  |     0.045 |
+|       genblk1[526].cell_module  |     0.041 |
+|       genblk1[527].cell_module  |     0.054 |
+|       genblk1[528].cell_module  |     0.047 |
+|       genblk1[529].cell_module  |     0.050 |
+|       genblk1[52].cell_module   |     0.041 |
+|       genblk1[530].cell_module  |     0.053 |
+|       genblk1[531].cell_module  |     0.053 |
+|       genblk1[532].cell_module  |     0.051 |
+|       genblk1[533].cell_module  |     0.040 |
+|       genblk1[534].cell_module  |     0.043 |
+|       genblk1[535].cell_module  |     0.045 |
+|       genblk1[536].cell_module  |     0.042 |
+|       genblk1[537].cell_module  |     0.044 |
+|       genblk1[538].cell_module  |     0.040 |
+|       genblk1[539].cell_module  |     0.043 |
+|       genblk1[53].cell_module   |     0.045 |
+|       genblk1[540].cell_module  |     0.041 |
+|       genblk1[541].cell_module  |     0.043 |
+|       genblk1[542].cell_module  |     0.039 |
+|       genblk1[543].cell_module  |     0.045 |
+|       genblk1[544].cell_module  |     0.046 |
+|       genblk1[545].cell_module  |     0.038 |
+|       genblk1[546].cell_module  |     0.043 |
+|       genblk1[547].cell_module  |     0.050 |
+|       genblk1[548].cell_module  |     0.040 |
+|       genblk1[549].cell_module  |     0.048 |
+|       genblk1[54].cell_module   |     0.042 |
+|       genblk1[550].cell_module  |     0.045 |
+|       genblk1[551].cell_module  |     0.046 |
+|       genblk1[552].cell_module  |     0.051 |
+|       genblk1[553].cell_module  |     0.047 |
+|       genblk1[554].cell_module  |     0.043 |
+|       genblk1[555].cell_module  |     0.054 |
+|       genblk1[556].cell_module  |     0.039 |
+|       genblk1[557].cell_module  |     0.050 |
+|       genblk1[558].cell_module  |     0.049 |
+|       genblk1[559].cell_module  |     0.048 |
+|       genblk1[55].cell_module   |     0.045 |
+|       genblk1[560].cell_module  |     0.062 |
+|       genblk1[561].cell_module  |     0.042 |
+|       genblk1[562].cell_module  |     0.042 |
+|       genblk1[563].cell_module  |     0.038 |
+|       genblk1[564].cell_module  |     0.047 |
+|       genblk1[565].cell_module  |     0.042 |
+|       genblk1[566].cell_module  |     0.042 |
+|       genblk1[567].cell_module  |     0.040 |
+|       genblk1[568].cell_module  |     0.044 |
+|       genblk1[569].cell_module  |     0.045 |
+|       genblk1[56].cell_module   |     0.048 |
+|       genblk1[570].cell_module  |     0.039 |
+|       genblk1[571].cell_module  |     0.043 |
+|       genblk1[572].cell_module  |     0.042 |
+|       genblk1[573].cell_module  |     0.043 |
+|       genblk1[574].cell_module  |     0.041 |
+|       genblk1[575].cell_module  |     0.045 |
+|       genblk1[576].cell_module  |     0.042 |
+|       genblk1[577].cell_module  |     0.053 |
+|       genblk1[578].cell_module  |     0.045 |
+|       genblk1[579].cell_module  |     0.039 |
+|       genblk1[57].cell_module   |     0.039 |
+|       genblk1[580].cell_module  |     0.048 |
+|       genblk1[581].cell_module  |     0.045 |
+|       genblk1[582].cell_module  |     0.049 |
+|       genblk1[583].cell_module  |     0.050 |
+|       genblk1[584].cell_module  |     0.044 |
+|       genblk1[585].cell_module  |     0.040 |
+|       genblk1[586].cell_module  |     0.045 |
+|       genblk1[587].cell_module  |     0.050 |
+|       genblk1[588].cell_module  |     0.046 |
+|       genblk1[589].cell_module  |     0.048 |
+|       genblk1[58].cell_module   |     0.048 |
+|       genblk1[590].cell_module  |     0.051 |
+|       genblk1[591].cell_module  |     0.055 |
+|       genblk1[592].cell_module  |     0.053 |
+|       genblk1[593].cell_module  |     0.046 |
+|       genblk1[594].cell_module  |     0.043 |
+|       genblk1[595].cell_module  |     0.046 |
+|       genblk1[596].cell_module  |     0.046 |
+|       genblk1[597].cell_module  |     0.046 |
+|       genblk1[598].cell_module  |     0.050 |
+|       genblk1[599].cell_module  |     0.057 |
+|       genblk1[59].cell_module   |     0.049 |
+|       genblk1[5].cell_module    |     0.046 |
+|       genblk1[600].cell_module  |     0.039 |
+|       genblk1[601].cell_module  |     0.042 |
+|       genblk1[602].cell_module  |     0.051 |
+|       genblk1[603].cell_module  |     0.039 |
+|       genblk1[604].cell_module  |     0.039 |
+|       genblk1[605].cell_module  |     0.055 |
+|       genblk1[606].cell_module  |     0.041 |
+|       genblk1[607].cell_module  |     0.050 |
+|       genblk1[608].cell_module  |     0.084 |
+|       genblk1[609].cell_module  |     0.088 |
+|       genblk1[60].cell_module   |     0.042 |
+|       genblk1[610].cell_module  |     0.074 |
+|       genblk1[611].cell_module  |     0.091 |
+|       genblk1[612].cell_module  |     0.094 |
+|       genblk1[613].cell_module  |     0.081 |
+|       genblk1[614].cell_module  |     0.079 |
+|       genblk1[615].cell_module  |     0.081 |
+|       genblk1[616].cell_module  |     0.082 |
+|       genblk1[617].cell_module  |     0.071 |
+|       genblk1[618].cell_module  |     0.080 |
+|       genblk1[619].cell_module  |     0.075 |
+|       genblk1[61].cell_module   |     0.042 |
+|       genblk1[620].cell_module  |     0.073 |
+|       genblk1[621].cell_module  |     0.079 |
+|       genblk1[622].cell_module  |     0.080 |
+|       genblk1[623].cell_module  |     0.086 |
+|       genblk1[624].cell_module  |     0.079 |
+|       genblk1[625].cell_module  |     0.075 |
+|       genblk1[626].cell_module  |     0.079 |
+|       genblk1[627].cell_module  |     0.090 |
+|       genblk1[628].cell_module  |     0.086 |
+|       genblk1[629].cell_module  |     0.084 |
+|       genblk1[62].cell_module   |     0.040 |
+|       genblk1[630].cell_module  |     0.080 |
+|       genblk1[631].cell_module  |     0.090 |
+|       genblk1[632].cell_module  |     0.083 |
+|       genblk1[633].cell_module  |     0.085 |
+|       genblk1[634].cell_module  |     0.091 |
+|       genblk1[635].cell_module  |     0.082 |
+|       genblk1[636].cell_module  |     0.081 |
+|       genblk1[637].cell_module  |     0.079 |
+|       genblk1[638].cell_module  |     0.077 |
+|       genblk1[639].cell_module  |     0.082 |
+|       genblk1[63].cell_module   |     0.049 |
+|       genblk1[640].cell_module  |     0.046 |
+|       genblk1[641].cell_module  |     0.042 |
+|       genblk1[642].cell_module  |     0.049 |
+|       genblk1[643].cell_module  |     0.046 |
+|       genblk1[644].cell_module  |     0.044 |
+|       genblk1[645].cell_module  |     0.042 |
+|       genblk1[646].cell_module  |     0.051 |
+|       genblk1[647].cell_module  |     0.051 |
+|       genblk1[648].cell_module  |     0.044 |
+|       genblk1[649].cell_module  |     0.047 |
+|       genblk1[64].cell_module   |     0.049 |
+|       genblk1[650].cell_module  |     0.050 |
+|       genblk1[651].cell_module  |     0.048 |
+|       genblk1[652].cell_module  |     0.052 |
+|       genblk1[653].cell_module  |     0.045 |
+|       genblk1[654].cell_module  |     0.047 |
+|       genblk1[655].cell_module  |     0.049 |
+|       genblk1[656].cell_module  |     0.052 |
+|       genblk1[657].cell_module  |     0.045 |
+|       genblk1[658].cell_module  |     0.045 |
+|       genblk1[659].cell_module  |     0.042 |
+|       genblk1[65].cell_module   |     0.045 |
+|       genblk1[660].cell_module  |     0.057 |
+|       genblk1[661].cell_module  |     0.034 |
+|       genblk1[662].cell_module  |     0.050 |
+|       genblk1[663].cell_module  |     0.050 |
+|       genblk1[664].cell_module  |     0.056 |
+|       genblk1[665].cell_module  |     0.046 |
+|       genblk1[666].cell_module  |     0.041 |
+|       genblk1[667].cell_module  |     0.045 |
+|       genblk1[668].cell_module  |     0.037 |
+|       genblk1[669].cell_module  |     0.042 |
+|       genblk1[66].cell_module   |     0.049 |
+|       genblk1[670].cell_module  |     0.047 |
+|       genblk1[671].cell_module  |     0.040 |
+|       genblk1[672].cell_module  |     0.041 |
+|       genblk1[673].cell_module  |     0.040 |
+|       genblk1[674].cell_module  |     0.052 |
+|       genblk1[675].cell_module  |     0.050 |
+|       genblk1[676].cell_module  |     0.049 |
+|       genblk1[677].cell_module  |     0.046 |
+|       genblk1[678].cell_module  |     0.048 |
+|       genblk1[679].cell_module  |     0.042 |
+|       genblk1[67].cell_module   |     0.048 |
+|       genblk1[680].cell_module  |     0.051 |
+|       genblk1[681].cell_module  |     0.042 |
+|       genblk1[682].cell_module  |     0.041 |
+|       genblk1[683].cell_module  |     0.052 |
+|       genblk1[684].cell_module  |     0.044 |
+|       genblk1[685].cell_module  |     0.048 |
+|       genblk1[686].cell_module  |     0.041 |
+|       genblk1[687].cell_module  |     0.054 |
+|       genblk1[688].cell_module  |     0.053 |
+|       genblk1[689].cell_module  |     0.038 |
+|       genblk1[68].cell_module   |     0.045 |
+|       genblk1[690].cell_module  |     0.047 |
+|       genblk1[691].cell_module  |     0.042 |
+|       genblk1[692].cell_module  |     0.045 |
+|       genblk1[693].cell_module  |     0.051 |
+|       genblk1[694].cell_module  |     0.047 |
+|       genblk1[695].cell_module  |     0.047 |
+|       genblk1[696].cell_module  |     0.045 |
+|       genblk1[697].cell_module  |     0.043 |
+|       genblk1[698].cell_module  |     0.037 |
+|       genblk1[699].cell_module  |     0.048 |
+|       genblk1[69].cell_module   |     0.048 |
+|       genblk1[6].cell_module    |     0.044 |
+|       genblk1[700].cell_module  |     0.051 |
+|       genblk1[701].cell_module  |     0.048 |
+|       genblk1[702].cell_module  |     0.046 |
+|       genblk1[703].cell_module  |     0.051 |
+|       genblk1[704].cell_module  |     0.043 |
+|       genblk1[705].cell_module  |     0.040 |
+|       genblk1[706].cell_module  |     0.048 |
+|       genblk1[707].cell_module  |     0.046 |
+|       genblk1[708].cell_module  |     0.046 |
+|       genblk1[709].cell_module  |     0.040 |
+|       genblk1[70].cell_module   |     0.042 |
+|       genblk1[710].cell_module  |     0.044 |
+|       genblk1[711].cell_module  |     0.053 |
+|       genblk1[712].cell_module  |     0.052 |
+|       genblk1[713].cell_module  |     0.038 |
+|       genblk1[714].cell_module  |     0.047 |
+|       genblk1[715].cell_module  |     0.050 |
+|       genblk1[716].cell_module  |     0.053 |
+|       genblk1[717].cell_module  |     0.041 |
+|       genblk1[718].cell_module  |     0.043 |
+|       genblk1[719].cell_module  |     0.052 |
+|       genblk1[71].cell_module   |     0.049 |
+|       genblk1[720].cell_module  |     0.053 |
+|       genblk1[721].cell_module  |     0.047 |
+|       genblk1[722].cell_module  |     0.050 |
+|       genblk1[723].cell_module  |     0.040 |
+|       genblk1[724].cell_module  |     0.046 |
+|       genblk1[725].cell_module  |     0.047 |
+|       genblk1[726].cell_module  |     0.038 |
+|       genblk1[727].cell_module  |     0.042 |
+|       genblk1[728].cell_module  |     0.039 |
+|       genblk1[729].cell_module  |     0.048 |
+|       genblk1[72].cell_module   |     0.040 |
+|       genblk1[730].cell_module  |     0.047 |
+|       genblk1[731].cell_module  |     0.040 |
+|       genblk1[732].cell_module  |     0.041 |
+|       genblk1[733].cell_module  |     0.040 |
+|       genblk1[734].cell_module  |     0.042 |
+|       genblk1[735].cell_module  |     0.055 |
+|       genblk1[736].cell_module  |     0.058 |
+|       genblk1[737].cell_module  |     0.066 |
+|       genblk1[738].cell_module  |     0.055 |
+|       genblk1[739].cell_module  |     0.049 |
+|       genblk1[73].cell_module   |     0.039 |
+|       genblk1[740].cell_module  |     0.059 |
+|       genblk1[741].cell_module  |     0.054 |
+|       genblk1[742].cell_module  |     0.059 |
+|       genblk1[743].cell_module  |     0.060 |
+|       genblk1[744].cell_module  |     0.057 |
+|       genblk1[745].cell_module  |     0.059 |
+|       genblk1[746].cell_module  |     0.060 |
+|       genblk1[747].cell_module  |     0.062 |
+|       genblk1[748].cell_module  |     0.058 |
+|       genblk1[749].cell_module  |     0.061 |
+|       genblk1[74].cell_module   |     0.039 |
+|       genblk1[750].cell_module  |     0.064 |
+|       genblk1[751].cell_module  |     0.063 |
+|       genblk1[752].cell_module  |     0.066 |
+|       genblk1[753].cell_module  |     0.061 |
+|       genblk1[754].cell_module  |     0.054 |
+|       genblk1[755].cell_module  |     0.054 |
+|       genblk1[756].cell_module  |     0.059 |
+|       genblk1[757].cell_module  |     0.052 |
+|       genblk1[758].cell_module  |     0.058 |
+|       genblk1[759].cell_module  |     0.052 |
+|       genblk1[75].cell_module   |     0.044 |
+|       genblk1[760].cell_module  |     0.055 |
+|       genblk1[761].cell_module  |     0.056 |
+|       genblk1[762].cell_module  |     0.049 |
+|       genblk1[763].cell_module  |     0.059 |
+|       genblk1[764].cell_module  |     0.051 |
+|       genblk1[765].cell_module  |     0.062 |
+|       genblk1[766].cell_module  |     0.052 |
+|       genblk1[767].cell_module  |     0.053 |
+|       genblk1[768].cell_module  |     0.050 |
+|       genblk1[769].cell_module  |     0.040 |
+|       genblk1[76].cell_module   |     0.042 |
+|       genblk1[770].cell_module  |     0.043 |
+|       genblk1[771].cell_module  |     0.043 |
+|       genblk1[772].cell_module  |     0.043 |
+|       genblk1[773].cell_module  |     0.046 |
+|       genblk1[774].cell_module  |     0.048 |
+|       genblk1[775].cell_module  |     0.044 |
+|       genblk1[776].cell_module  |     0.044 |
+|       genblk1[777].cell_module  |     0.044 |
+|       genblk1[778].cell_module  |     0.055 |
+|       genblk1[779].cell_module  |     0.041 |
+|       genblk1[77].cell_module   |     0.046 |
+|       genblk1[780].cell_module  |     0.046 |
+|       genblk1[781].cell_module  |     0.046 |
+|       genblk1[782].cell_module  |     0.046 |
+|       genblk1[783].cell_module  |     0.049 |
+|       genblk1[784].cell_module  |     0.057 |
+|       genblk1[785].cell_module  |     0.046 |
+|       genblk1[786].cell_module  |     0.044 |
+|       genblk1[787].cell_module  |     0.054 |
+|       genblk1[788].cell_module  |     0.040 |
+|       genblk1[789].cell_module  |     0.048 |
+|       genblk1[78].cell_module   |     0.043 |
+|       genblk1[790].cell_module  |     0.051 |
+|       genblk1[791].cell_module  |     0.052 |
+|       genblk1[792].cell_module  |     0.040 |
+|       genblk1[793].cell_module  |     0.048 |
+|       genblk1[794].cell_module  |     0.036 |
+|       genblk1[795].cell_module  |     0.050 |
+|       genblk1[796].cell_module  |     0.044 |
+|       genblk1[797].cell_module  |     0.045 |
+|       genblk1[798].cell_module  |     0.036 |
+|       genblk1[799].cell_module  |     0.046 |
+|       genblk1[79].cell_module   |     0.044 |
+|       genblk1[7].cell_module    |     0.040 |
+|       genblk1[800].cell_module  |     0.055 |
+|       genblk1[801].cell_module  |     0.047 |
+|       genblk1[802].cell_module  |     0.043 |
+|       genblk1[803].cell_module  |     0.042 |
+|       genblk1[804].cell_module  |     0.052 |
+|       genblk1[805].cell_module  |     0.045 |
+|       genblk1[806].cell_module  |     0.047 |
+|       genblk1[807].cell_module  |     0.049 |
+|       genblk1[808].cell_module  |     0.048 |
+|       genblk1[809].cell_module  |     0.046 |
+|       genblk1[80].cell_module   |     0.045 |
+|       genblk1[810].cell_module  |     0.054 |
+|       genblk1[811].cell_module  |     0.057 |
+|       genblk1[812].cell_module  |     0.044 |
+|       genblk1[813].cell_module  |     0.053 |
+|       genblk1[814].cell_module  |     0.046 |
+|       genblk1[815].cell_module  |     0.045 |
+|       genblk1[816].cell_module  |     0.046 |
+|       genblk1[817].cell_module  |     0.049 |
+|       genblk1[818].cell_module  |     0.039 |
+|       genblk1[819].cell_module  |     0.038 |
+|       genblk1[81].cell_module   |     0.057 |
+|       genblk1[820].cell_module  |     0.042 |
+|       genblk1[821].cell_module  |     0.051 |
+|       genblk1[822].cell_module  |     0.045 |
+|       genblk1[823].cell_module  |     0.049 |
+|       genblk1[824].cell_module  |     0.053 |
+|       genblk1[825].cell_module  |     0.050 |
+|       genblk1[826].cell_module  |     0.043 |
+|       genblk1[827].cell_module  |     0.046 |
+|       genblk1[828].cell_module  |     0.044 |
+|       genblk1[829].cell_module  |     0.051 |
+|       genblk1[82].cell_module   |     0.044 |
+|       genblk1[830].cell_module  |     0.043 |
+|       genblk1[831].cell_module  |     0.047 |
+|       genblk1[832].cell_module  |     0.044 |
+|       genblk1[833].cell_module  |     0.049 |
+|       genblk1[834].cell_module  |     0.052 |
+|       genblk1[835].cell_module  |     0.043 |
+|       genblk1[836].cell_module  |     0.051 |
+|       genblk1[837].cell_module  |     0.040 |
+|       genblk1[838].cell_module  |     0.040 |
+|       genblk1[839].cell_module  |     0.052 |
+|       genblk1[83].cell_module   |     0.040 |
+|       genblk1[840].cell_module  |     0.044 |
+|       genblk1[841].cell_module  |     0.049 |
+|       genblk1[842].cell_module  |     0.050 |
+|       genblk1[843].cell_module  |     0.048 |
+|       genblk1[844].cell_module  |     0.038 |
+|       genblk1[845].cell_module  |     0.051 |
+|       genblk1[846].cell_module  |     0.042 |
+|       genblk1[847].cell_module  |     0.047 |
+|       genblk1[848].cell_module  |     0.050 |
+|       genblk1[849].cell_module  |     0.052 |
+|       genblk1[84].cell_module   |     0.045 |
+|       genblk1[850].cell_module  |     0.040 |
+|       genblk1[851].cell_module  |     0.040 |
+|       genblk1[852].cell_module  |     0.047 |
+|       genblk1[853].cell_module  |     0.047 |
+|       genblk1[854].cell_module  |     0.047 |
+|       genblk1[855].cell_module  |     0.048 |
+|       genblk1[856].cell_module  |     0.045 |
+|       genblk1[857].cell_module  |     0.035 |
+|       genblk1[858].cell_module  |     0.045 |
+|       genblk1[859].cell_module  |     0.039 |
+|       genblk1[85].cell_module   |     0.042 |
+|       genblk1[860].cell_module  |     0.042 |
+|       genblk1[861].cell_module  |     0.047 |
+|       genblk1[862].cell_module  |     0.037 |
+|       genblk1[863].cell_module  |     0.047 |
+|       genblk1[864].cell_module  |     0.055 |
+|       genblk1[865].cell_module  |     0.065 |
+|       genblk1[866].cell_module  |     0.058 |
+|       genblk1[867].cell_module  |     0.049 |
+|       genblk1[868].cell_module  |     0.056 |
+|       genblk1[869].cell_module  |     0.056 |
+|       genblk1[86].cell_module   |     0.047 |
+|       genblk1[870].cell_module  |     0.060 |
+|       genblk1[871].cell_module  |     0.053 |
+|       genblk1[872].cell_module  |     0.060 |
+|       genblk1[873].cell_module  |     0.056 |
+|       genblk1[874].cell_module  |     0.056 |
+|       genblk1[875].cell_module  |     0.060 |
+|       genblk1[876].cell_module  |     0.052 |
+|       genblk1[877].cell_module  |     0.056 |
+|       genblk1[878].cell_module  |     0.053 |
+|       genblk1[879].cell_module  |     0.062 |
+|       genblk1[87].cell_module   |     0.043 |
+|       genblk1[880].cell_module  |     0.061 |
+|       genblk1[881].cell_module  |     0.059 |
+|       genblk1[882].cell_module  |     0.058 |
+|       genblk1[883].cell_module  |     0.049 |
+|       genblk1[884].cell_module  |     0.060 |
+|       genblk1[885].cell_module  |     0.059 |
+|       genblk1[886].cell_module  |     0.059 |
+|       genblk1[887].cell_module  |     0.059 |
+|       genblk1[888].cell_module  |     0.053 |
+|       genblk1[889].cell_module  |     0.064 |
+|       genblk1[88].cell_module   |     0.046 |
+|       genblk1[890].cell_module  |     0.059 |
+|       genblk1[891].cell_module  |     0.061 |
+|       genblk1[892].cell_module  |     0.054 |
+|       genblk1[893].cell_module  |     0.058 |
+|       genblk1[894].cell_module  |     0.061 |
+|       genblk1[895].cell_module  |     0.052 |
+|       genblk1[896].cell_module  |     0.045 |
+|       genblk1[897].cell_module  |     0.040 |
+|       genblk1[898].cell_module  |     0.038 |
+|       genblk1[899].cell_module  |     0.040 |
+|       genblk1[89].cell_module   |     0.044 |
+|       genblk1[8].cell_module    |     0.049 |
+|       genblk1[900].cell_module  |     0.049 |
+|       genblk1[901].cell_module  |     0.046 |
+|       genblk1[902].cell_module  |     0.048 |
+|       genblk1[903].cell_module  |     0.035 |
+|       genblk1[904].cell_module  |     0.041 |
+|       genblk1[905].cell_module  |     0.039 |
+|       genblk1[906].cell_module  |     0.041 |
+|       genblk1[907].cell_module  |     0.041 |
+|       genblk1[908].cell_module  |     0.042 |
+|       genblk1[909].cell_module  |     0.042 |
+|       genblk1[90].cell_module   |     0.039 |
+|       genblk1[910].cell_module  |     0.042 |
+|       genblk1[911].cell_module  |     0.061 |
+|       genblk1[912].cell_module  |     0.037 |
+|       genblk1[913].cell_module  |     0.046 |
+|       genblk1[914].cell_module  |     0.052 |
+|       genblk1[915].cell_module  |     0.037 |
+|       genblk1[916].cell_module  |     0.044 |
+|       genblk1[917].cell_module  |     0.043 |
+|       genblk1[918].cell_module  |     0.044 |
+|       genblk1[919].cell_module  |     0.051 |
+|       genblk1[91].cell_module   |     0.048 |
+|       genblk1[920].cell_module  |     0.044 |
+|       genblk1[921].cell_module  |     0.057 |
+|       genblk1[922].cell_module  |     0.047 |
+|       genblk1[923].cell_module  |     0.034 |
+|       genblk1[924].cell_module  |     0.044 |
+|       genblk1[925].cell_module  |     0.043 |
+|       genblk1[926].cell_module  |     0.044 |
+|       genblk1[927].cell_module  |     0.046 |
+|       genblk1[928].cell_module  |     0.048 |
+|       genblk1[929].cell_module  |     0.044 |
+|       genblk1[92].cell_module   |     0.046 |
+|       genblk1[930].cell_module  |     0.054 |
+|       genblk1[931].cell_module  |     0.044 |
+|       genblk1[932].cell_module  |     0.039 |
+|       genblk1[933].cell_module  |     0.044 |
+|       genblk1[934].cell_module  |     0.043 |
+|       genblk1[935].cell_module  |     0.042 |
+|       genblk1[936].cell_module  |     0.039 |
+|       genblk1[937].cell_module  |     0.051 |
+|       genblk1[938].cell_module  |     0.054 |
+|       genblk1[939].cell_module  |     0.053 |
+|       genblk1[93].cell_module   |     0.040 |
+|       genblk1[940].cell_module  |     0.051 |
+|       genblk1[941].cell_module  |     0.052 |
+|       genblk1[942].cell_module  |     0.046 |
+|       genblk1[943].cell_module  |     0.050 |
+|       genblk1[944].cell_module  |     0.044 |
+|       genblk1[945].cell_module  |     0.051 |
+|       genblk1[946].cell_module  |     0.047 |
+|       genblk1[947].cell_module  |     0.048 |
+|       genblk1[948].cell_module  |     0.049 |
+|       genblk1[949].cell_module  |     0.044 |
+|       genblk1[94].cell_module   |     0.047 |
+|       genblk1[950].cell_module  |     0.046 |
+|       genblk1[951].cell_module  |     0.044 |
+|       genblk1[952].cell_module  |     0.048 |
+|       genblk1[953].cell_module  |     0.042 |
+|       genblk1[954].cell_module  |     0.047 |
+|       genblk1[955].cell_module  |     0.035 |
+|       genblk1[956].cell_module  |     0.040 |
+|       genblk1[957].cell_module  |     0.048 |
+|       genblk1[958].cell_module  |     0.049 |
+|       genblk1[959].cell_module  |     0.040 |
+|       genblk1[95].cell_module   |     0.044 |
+|       genblk1[960].cell_module  |     0.044 |
+|       genblk1[961].cell_module  |     0.050 |
+|       genblk1[962].cell_module  |     0.047 |
+|       genblk1[963].cell_module  |     0.050 |
+|       genblk1[964].cell_module  |     0.048 |
+|       genblk1[965].cell_module  |     0.048 |
+|       genblk1[966].cell_module  |     0.047 |
+|       genblk1[967].cell_module  |     0.043 |
+|       genblk1[968].cell_module  |     0.039 |
+|       genblk1[969].cell_module  |     0.046 |
+|       genblk1[96].cell_module   |     0.073 |
+|       genblk1[970].cell_module  |     0.052 |
+|       genblk1[971].cell_module  |     0.044 |
+|       genblk1[972].cell_module  |     0.038 |
+|       genblk1[973].cell_module  |     0.047 |
+|       genblk1[974].cell_module  |     0.048 |
+|       genblk1[975].cell_module  |     0.044 |
+|       genblk1[976].cell_module  |     0.049 |
+|       genblk1[977].cell_module  |     0.045 |
+|       genblk1[978].cell_module  |     0.046 |
+|       genblk1[979].cell_module  |     0.046 |
+|       genblk1[97].cell_module   |     0.066 |
+|       genblk1[980].cell_module  |     0.044 |
+|       genblk1[981].cell_module  |     0.039 |
+|       genblk1[982].cell_module  |     0.043 |
+|       genblk1[983].cell_module  |     0.049 |
+|       genblk1[984].cell_module  |     0.046 |
+|       genblk1[985].cell_module  |     0.042 |
+|       genblk1[986].cell_module  |     0.039 |
+|       genblk1[987].cell_module  |     0.043 |
+|       genblk1[988].cell_module  |     0.049 |
+|       genblk1[989].cell_module  |     0.045 |
+|       genblk1[98].cell_module   |     0.067 |
+|       genblk1[990].cell_module  |     0.045 |
+|       genblk1[991].cell_module  |     0.052 |
+|       genblk1[992].cell_module  |     0.053 |
+|       genblk1[993].cell_module  |     0.050 |
+|       genblk1[994].cell_module  |     0.067 |
+|       genblk1[995].cell_module  |     0.055 |
+|       genblk1[996].cell_module  |     0.061 |
+|       genblk1[997].cell_module  |     0.049 |
+|       genblk1[998].cell_module  |     0.057 |
+|       genblk1[999].cell_module  |     0.062 |
+|       genblk1[99].cell_module   |     0.058 |
+|       genblk1[9].cell_module    |     0.040 |
++---------------------------------+-----------+
+
+

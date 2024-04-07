@@ -1,0 +1,16 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2.1 (win64) Build 4081461 Thu Dec 14 12:24:51 MST 2023
+| Date         : Tue Feb 13 11:46:39 2024
+| Host         : CallumsLaptop running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file CA_IP_v1_0_bus_skew_routed.rpt -pb CA_IP_v1_0_bus_skew_routed.pb -rpx CA_IP_v1_0_bus_skew_routed.rpx
+| Design       : CA_IP_v1_0
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

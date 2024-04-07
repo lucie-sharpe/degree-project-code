@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2.2 (64-bit)
+# SW Build 4126759 on Thu Feb  8 23:53:51 MST 2024
+# IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
+# SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
+# Start of session at: Fri Mar  1 16:01:28 2024
+# Process ID: 30368
+# Current directory: M:/Uni/Modules/CS351_Proj/cs351-code/CA_CGOL_64x64/CA_CGOL_64x64.runs/synth_1
+# Command line: vivado.exe -log CA_CGOL_AXI_Lite.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CA_CGOL_AXI_Lite.tcl
+# Log file: M:/Uni/Modules/CS351_Proj/cs351-code/CA_CGOL_64x64/CA_CGOL_64x64.runs/synth_1/CA_CGOL_AXI_Lite.vds
+# Journal file: M:/Uni/Modules/CS351_Proj/cs351-code/CA_CGOL_64x64/CA_CGOL_64x64.runs/synth_1\vivado.jou
+# Running On: CallumsLaptop, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 16312 MB
+#-----------------------------------------------------------
+source CA_CGOL_AXI_Lite.tcl -notrace

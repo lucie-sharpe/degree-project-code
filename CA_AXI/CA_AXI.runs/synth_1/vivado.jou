@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2.1 (64-bit)
+# SW Build 4081461 on Thu Dec 14 12:24:51 MST 2023
+# IP Build 4080415 on Thu Dec 14 21:01:57 MST 2023
+# SharedData Build 4077621 on Mon Dec 11 00:23:44 MST 2023
+# Start of session at: Mon Feb 12 22:44:32 2024
+# Process ID: 178440
+# Current directory: M:/Uni/Modules/CS351_Proj/cs351-code/CA_AXI/CA_AXI.runs/synth_1
+# Command line: vivado.exe -log CA_IP_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CA_IP_v1_0.tcl
+# Log file: M:/Uni/Modules/CS351_Proj/cs351-code/CA_AXI/CA_AXI.runs/synth_1/CA_IP_v1_0.vds
+# Journal file: M:/Uni/Modules/CS351_Proj/cs351-code/CA_AXI/CA_AXI.runs/synth_1\vivado.jou
+# Running On: CallumsLaptop, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 16312 MB
+#-----------------------------------------------------------
+source CA_IP_v1_0.tcl -notrace

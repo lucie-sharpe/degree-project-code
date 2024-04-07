@@ -1,0 +1,650 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
+| Date         : Thu Mar  7 11:53:22 2024
+| Host         : CallumsLaptop running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file CA_Wolfram_AXI_Lite_timing_summary_routed.rpt -pb CA_Wolfram_AXI_Lite_timing_summary_routed.pb -rpx CA_Wolfram_AXI_Lite_timing_summary_routed.rpx -warn_on_violation
+| Design       : CA_Wolfram_AXI_Lite
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  1000        
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (2254)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (5688)
+5. checking no_input_delay (56)
+6. checking no_output_delay (37)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (2254)
+---------------------------
+ There are 2254 register/latch pins with no clock driven by root clock pin: s00_axi_aclk (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (5688)
+---------------------------------------------------
+ There are 5688 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (56)
+-------------------------------
+ There are 56 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (37)
+--------------------------------
+ There are 37 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                 5725          inf        0.000                      0                 5725           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay          5725 Endpoints
+Min Delay          5725 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[617].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        26.895ns  (logic 1.125ns (4.183%)  route 25.770ns (95.817%))
+  Logic Levels:           4  (FDRE=1 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y129        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+    SLICE_X28Y129        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/Q
+                         net (fo=1023, routed)       24.778    25.234    AXI_Lite_S00_AXI_inst/board_module/genblk1[618].cell_module/state_reg_i_2__615_0[0]
+    SLICE_X12Y125        LUT6 (Prop_lut6_I1_O)        0.124    25.358 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[618].cell_module/state_i_4__615/O
+                         net (fo=1, routed)           0.000    25.358    AXI_Lite_S00_AXI_inst/board_module/genblk1[618].cell_module/state_i_4__615_n_0
+    SLICE_X12Y125        MUXF7 (Prop_muxf7_I1_O)      0.247    25.605 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[618].cell_module/state_reg_i_2__615/O
+                         net (fo=1, routed)           0.992    26.597    AXI_Lite_S00_AXI_inst/board_module/genblk1[618].cell_module/state_reg_i_2__615_n_0
+    SLICE_X13Y125        LUT5 (Prop_lut5_I1_O)        0.298    26.895 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[618].cell_module/state_i_1__616/O
+                         net (fo=1, routed)           0.000    26.895    AXI_Lite_S00_AXI_inst/board_module/genblk1[617].cell_module/state_reg_1
+    SLICE_X13Y125        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[617].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[552].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        26.670ns  (logic 1.091ns (4.091%)  route 25.579ns (95.909%))
+  Logic Levels:           4  (FDRE=1 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y129        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+    SLICE_X28Y129        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/Q
+                         net (fo=1023, routed)       24.739    25.195    AXI_Lite_S00_AXI_inst/board_module/genblk1[553].cell_module/state_reg_i_2__550_0[0]
+    SLICE_X12Y124        LUT6 (Prop_lut6_I1_O)        0.124    25.319 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[553].cell_module/state_i_4__550/O
+                         net (fo=1, routed)           0.000    25.319    AXI_Lite_S00_AXI_inst/board_module/genblk1[553].cell_module/state_i_4__550_n_0
+    SLICE_X12Y124        MUXF7 (Prop_muxf7_I1_O)      0.214    25.533 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[553].cell_module/state_reg_i_2__550/O
+                         net (fo=1, routed)           0.841    26.373    AXI_Lite_S00_AXI_inst/board_module/genblk1[553].cell_module/state_reg_i_2__550_n_0
+    SLICE_X14Y124        LUT5 (Prop_lut5_I1_O)        0.297    26.670 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[553].cell_module/state_i_1__551/O
+                         net (fo=1, routed)           0.000    26.670    AXI_Lite_S00_AXI_inst/board_module/genblk1[552].cell_module/state_reg_1
+    SLICE_X14Y124        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[552].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[712].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        26.630ns  (logic 1.096ns (4.116%)  route 25.534ns (95.884%))
+  Logic Levels:           4  (FDRE=1 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y129        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+    SLICE_X28Y129        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/Q
+                         net (fo=1023, routed)       25.101    25.557    AXI_Lite_S00_AXI_inst/board_module/genblk1[713].cell_module/state_reg_i_2__710_0[0]
+    SLICE_X13Y123        LUT6 (Prop_lut6_I1_O)        0.124    25.681 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[713].cell_module/state_i_4__710/O
+                         net (fo=1, routed)           0.000    25.681    AXI_Lite_S00_AXI_inst/board_module/genblk1[713].cell_module/state_i_4__710_n_0
+    SLICE_X13Y123        MUXF7 (Prop_muxf7_I1_O)      0.217    25.898 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[713].cell_module/state_reg_i_2__710/O
+                         net (fo=1, routed)           0.433    26.331    AXI_Lite_S00_AXI_inst/board_module/genblk1[713].cell_module/state_reg_i_2__710_n_0
+    SLICE_X13Y123        LUT5 (Prop_lut5_I1_O)        0.299    26.630 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[713].cell_module/state_i_1__711/O
+                         net (fo=1, routed)           0.000    26.630    AXI_Lite_S00_AXI_inst/board_module/genblk1[712].cell_module/state_reg_1
+    SLICE_X13Y123        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[712].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[585].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        26.569ns  (logic 1.091ns (4.106%)  route 25.478ns (95.894%))
+  Logic Levels:           4  (FDRE=1 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y129        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+    SLICE_X28Y129        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/Q
+                         net (fo=1023, routed)       24.769    25.225    AXI_Lite_S00_AXI_inst/board_module/genblk1[586].cell_module/state_reg_i_2__583_0[0]
+    SLICE_X12Y125        LUT6 (Prop_lut6_I1_O)        0.124    25.349 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[586].cell_module/state_i_4__583/O
+                         net (fo=1, routed)           0.000    25.349    AXI_Lite_S00_AXI_inst/board_module/genblk1[586].cell_module/state_i_4__583_n_0
+    SLICE_X12Y125        MUXF7 (Prop_muxf7_I1_O)      0.214    25.563 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[586].cell_module/state_reg_i_2__583/O
+                         net (fo=1, routed)           0.709    26.272    AXI_Lite_S00_AXI_inst/board_module/genblk1[586].cell_module/state_reg_i_2__583_n_0
+    SLICE_X13Y125        LUT5 (Prop_lut5_I1_O)        0.297    26.569 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[586].cell_module/state_i_1__584/O
+                         net (fo=1, routed)           0.000    26.569    AXI_Lite_S00_AXI_inst/board_module/genblk1[585].cell_module/state_reg_1
+    SLICE_X13Y125        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[585].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[616].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        26.547ns  (logic 1.123ns (4.230%)  route 25.424ns (95.770%))
+  Logic Levels:           4  (FDRE=1 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y129        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+    SLICE_X28Y129        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/Q
+                         net (fo=1023, routed)       24.614    25.070    AXI_Lite_S00_AXI_inst/board_module/genblk1[617].cell_module/state_reg_i_2__614_0[0]
+    SLICE_X13Y126        LUT6 (Prop_lut6_I1_O)        0.124    25.194 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[617].cell_module/state_i_4__614/O
+                         net (fo=1, routed)           0.000    25.194    AXI_Lite_S00_AXI_inst/board_module/genblk1[617].cell_module/state_i_4__614_n_0
+    SLICE_X13Y126        MUXF7 (Prop_muxf7_I1_O)      0.245    25.439 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[617].cell_module/state_reg_i_2__614/O
+                         net (fo=1, routed)           0.811    26.249    AXI_Lite_S00_AXI_inst/board_module/genblk1[617].cell_module/state_reg_i_2__614_n_0
+    SLICE_X13Y125        LUT5 (Prop_lut5_I1_O)        0.298    26.547 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[617].cell_module/state_i_1__615/O
+                         net (fo=1, routed)           0.000    26.547    AXI_Lite_S00_AXI_inst/board_module/genblk1[616].cell_module/state_reg_1
+    SLICE_X13Y125        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[616].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[713].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        26.507ns  (logic 1.091ns (4.116%)  route 25.416ns (95.884%))
+  Logic Levels:           4  (FDRE=1 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y129        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+    SLICE_X28Y129        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/Q
+                         net (fo=1023, routed)       25.106    25.562    AXI_Lite_S00_AXI_inst/board_module/genblk1[714].cell_module/state_reg_i_2__711_0[0]
+    SLICE_X12Y123        LUT6 (Prop_lut6_I1_O)        0.124    25.686 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[714].cell_module/state_i_4__711/O
+                         net (fo=1, routed)           0.000    25.686    AXI_Lite_S00_AXI_inst/board_module/genblk1[714].cell_module/state_i_4__711_n_0
+    SLICE_X12Y123        MUXF7 (Prop_muxf7_I1_O)      0.214    25.900 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[714].cell_module/state_reg_i_2__711/O
+                         net (fo=1, routed)           0.310    26.210    AXI_Lite_S00_AXI_inst/board_module/genblk1[714].cell_module/state_reg_i_2__711_n_0
+    SLICE_X12Y122        LUT5 (Prop_lut5_I1_O)        0.297    26.507 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[714].cell_module/state_i_1__712/O
+                         net (fo=1, routed)           0.000    26.507    AXI_Lite_S00_AXI_inst/board_module/genblk1[713].cell_module/state_reg_1
+    SLICE_X12Y122        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[713].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[744].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        26.395ns  (logic 1.125ns (4.262%)  route 25.270ns (95.738%))
+  Logic Levels:           4  (FDRE=1 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y129        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+    SLICE_X28Y129        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/Q
+                         net (fo=1023, routed)       24.606    25.062    AXI_Lite_S00_AXI_inst/board_module/genblk1[745].cell_module/state_reg_i_2__742_0[0]
+    SLICE_X12Y123        LUT6 (Prop_lut6_I1_O)        0.124    25.186 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[745].cell_module/state_i_4__742/O
+                         net (fo=1, routed)           0.000    25.186    AXI_Lite_S00_AXI_inst/board_module/genblk1[745].cell_module/state_i_4__742_n_0
+    SLICE_X12Y123        MUXF7 (Prop_muxf7_I1_O)      0.247    25.433 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[745].cell_module/state_reg_i_2__742/O
+                         net (fo=1, routed)           0.664    26.097    AXI_Lite_S00_AXI_inst/board_module/genblk1[745].cell_module/state_reg_i_2__742_n_0
+    SLICE_X12Y122        LUT5 (Prop_lut5_I1_O)        0.298    26.395 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[745].cell_module/state_i_1__743/O
+                         net (fo=1, routed)           0.000    26.395    AXI_Lite_S00_AXI_inst/board_module/genblk1[744].cell_module/state_reg_2
+    SLICE_X12Y122        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[744].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[840].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        26.222ns  (logic 1.091ns (4.161%)  route 25.131ns (95.839%))
+  Logic Levels:           4  (FDRE=1 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y129        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+    SLICE_X28Y129        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/Q
+                         net (fo=1023, routed)       24.271    24.727    AXI_Lite_S00_AXI_inst/board_module/genblk1[841].cell_module/state_reg_i_2__838_0[4]
+    SLICE_X14Y130        LUT6 (Prop_lut6_I1_O)        0.124    24.851 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[841].cell_module/state_i_4__838/O
+                         net (fo=1, routed)           0.000    24.851    AXI_Lite_S00_AXI_inst/board_module/genblk1[841].cell_module/state_i_4__838_n_0
+    SLICE_X14Y130        MUXF7 (Prop_muxf7_I1_O)      0.214    25.065 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[841].cell_module/state_reg_i_2__838/O
+                         net (fo=1, routed)           0.860    25.925    AXI_Lite_S00_AXI_inst/board_module/genblk1[841].cell_module/state_reg_i_2__838_n_0
+    SLICE_X14Y129        LUT5 (Prop_lut5_I1_O)        0.297    26.222 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[841].cell_module/state_i_1__839/O
+                         net (fo=1, routed)           0.000    26.222    AXI_Lite_S00_AXI_inst/board_module/genblk1[840].cell_module/state_reg_1
+    SLICE_X14Y129        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[840].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[649].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        26.145ns  (logic 1.091ns (4.173%)  route 25.054ns (95.827%))
+  Logic Levels:           4  (FDRE=1 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y129        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+    SLICE_X28Y129        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/Q
+                         net (fo=1023, routed)       24.259    24.715    AXI_Lite_S00_AXI_inst/board_module/genblk1[650].cell_module/state_reg_i_2__647_0[0]
+    SLICE_X14Y126        LUT6 (Prop_lut6_I1_O)        0.124    24.839 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[650].cell_module/state_i_4__647/O
+                         net (fo=1, routed)           0.000    24.839    AXI_Lite_S00_AXI_inst/board_module/genblk1[650].cell_module/state_i_4__647_n_0
+    SLICE_X14Y126        MUXF7 (Prop_muxf7_I1_O)      0.214    25.053 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[650].cell_module/state_reg_i_2__647/O
+                         net (fo=1, routed)           0.795    25.848    AXI_Lite_S00_AXI_inst/board_module/genblk1[650].cell_module/state_reg_i_2__647_n_0
+    SLICE_X12Y127        LUT5 (Prop_lut5_I1_O)        0.297    26.145 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[650].cell_module/state_i_1__648/O
+                         net (fo=1, routed)           0.000    26.145    AXI_Lite_S00_AXI_inst/board_module/genblk1[649].cell_module/state_reg_1
+    SLICE_X12Y127        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[649].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[969].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        26.120ns  (logic 1.096ns (4.196%)  route 25.024ns (95.804%))
+  Logic Levels:           4  (FDRE=1 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y129        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/C
+    SLICE_X28Y129        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  AXI_Lite_S00_AXI_inst/slv_reg65_reg[5]/Q
+                         net (fo=1023, routed)       23.922    24.378    AXI_Lite_S00_AXI_inst/board_module/genblk1[970].cell_module/state_reg_i_2__967_0[1]
+    SLICE_X11Y130        LUT6 (Prop_lut6_I1_O)        0.124    24.502 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[970].cell_module/state_i_4__967/O
+                         net (fo=1, routed)           0.000    24.502    AXI_Lite_S00_AXI_inst/board_module/genblk1[970].cell_module/state_i_4__967_n_0
+    SLICE_X11Y130        MUXF7 (Prop_muxf7_I1_O)      0.217    24.719 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[970].cell_module/state_reg_i_2__967/O
+                         net (fo=1, routed)           1.103    25.821    AXI_Lite_S00_AXI_inst/board_module/genblk1[970].cell_module/state_reg_i_2__967_n_0
+    SLICE_X11Y128        LUT5 (Prop_lut5_I1_O)        0.299    26.120 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[970].cell_module/state_i_1__968/O
+                         net (fo=1, routed)           0.000    26.120    AXI_Lite_S00_AXI_inst/board_module/genblk1[969].cell_module/state_reg_2
+    SLICE_X11Y128        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[969].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg31_reg[23]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[23].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.249ns  (logic 0.186ns (74.680%)  route 0.063ns (25.320%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X32Y161        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg31_reg[23]/C
+    SLICE_X32Y161        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  AXI_Lite_S00_AXI_inst/slv_reg31_reg[23]/Q
+                         net (fo=2, routed)           0.063     0.204    AXI_Lite_S00_AXI_inst/board_module/genblk1[24].cell_module/new_state[0]
+    SLICE_X33Y161        LUT5 (Prop_lut5_I0_O)        0.045     0.249 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[24].cell_module/state_i_1__22/O
+                         net (fo=1, routed)           0.000     0.249    AXI_Lite_S00_AXI_inst/board_module/genblk1[23].cell_module/state_reg_2
+    SLICE_X33Y161        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[23].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg17_reg[20]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[468].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.249ns  (logic 0.186ns (74.680%)  route 0.063ns (25.320%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X26Y155        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg17_reg[20]/C
+    SLICE_X26Y155        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  AXI_Lite_S00_AXI_inst/slv_reg17_reg[20]/Q
+                         net (fo=2, routed)           0.063     0.204    AXI_Lite_S00_AXI_inst/board_module/genblk1[469].cell_module/new_state[0]
+    SLICE_X27Y155        LUT5 (Prop_lut5_I0_O)        0.045     0.249 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[469].cell_module/state_i_1__467/O
+                         net (fo=1, routed)           0.000     0.249    AXI_Lite_S00_AXI_inst/board_module/genblk1[468].cell_module/state_reg_1
+    SLICE_X27Y155        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[468].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg16_reg[25]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[505].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.250ns  (logic 0.186ns (74.329%)  route 0.064ns (25.671%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y164        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg16_reg[25]/C
+    SLICE_X39Y164        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  AXI_Lite_S00_AXI_inst/slv_reg16_reg[25]/Q
+                         net (fo=2, routed)           0.064     0.205    AXI_Lite_S00_AXI_inst/board_module/genblk1[506].cell_module/new_state[0]
+    SLICE_X38Y164        LUT5 (Prop_lut5_I0_O)        0.045     0.250 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[506].cell_module/state_i_1__504/O
+                         net (fo=1, routed)           0.000     0.250    AXI_Lite_S00_AXI_inst/board_module/genblk1[505].cell_module/state_reg_2
+    SLICE_X38Y164        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[505].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg4_reg[17]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[881].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.250ns  (logic 0.186ns (74.329%)  route 0.064ns (25.671%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y155         FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg4_reg[17]/C
+    SLICE_X3Y155         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  AXI_Lite_S00_AXI_inst/slv_reg4_reg[17]/Q
+                         net (fo=2, routed)           0.064     0.205    AXI_Lite_S00_AXI_inst/board_module/genblk1[882].cell_module/new_state[0]
+    SLICE_X2Y155         LUT5 (Prop_lut5_I0_O)        0.045     0.250 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[882].cell_module/state_i_1__880/O
+                         net (fo=1, routed)           0.000     0.250    AXI_Lite_S00_AXI_inst/board_module/genblk1[881].cell_module/state_reg_1
+    SLICE_X2Y155         FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[881].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg28_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[97].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.250ns  (logic 0.186ns (74.329%)  route 0.064ns (25.671%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y149        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg28_reg[1]/C
+    SLICE_X47Y149        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  AXI_Lite_S00_AXI_inst/slv_reg28_reg[1]/Q
+                         net (fo=2, routed)           0.064     0.205    AXI_Lite_S00_AXI_inst/board_module/genblk1[98].cell_module/new_state[0]
+    SLICE_X46Y149        LUT5 (Prop_lut5_I0_O)        0.045     0.250 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[98].cell_module/state_i_1__96/O
+                         net (fo=1, routed)           0.000     0.250    AXI_Lite_S00_AXI_inst/board_module/genblk1[97].cell_module/state_reg_1
+    SLICE_X46Y149        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[97].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg2_reg[21]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[949].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.250ns  (logic 0.186ns (74.310%)  route 0.064ns (25.690%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y166         FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg2_reg[21]/C
+    SLICE_X7Y166         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  AXI_Lite_S00_AXI_inst/slv_reg2_reg[21]/Q
+                         net (fo=2, routed)           0.064     0.205    AXI_Lite_S00_AXI_inst/board_module/genblk1[950].cell_module/new_state[0]
+    SLICE_X6Y166         LUT5 (Prop_lut5_I0_O)        0.045     0.250 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[950].cell_module/state_i_1__948/O
+                         net (fo=1, routed)           0.000     0.250    AXI_Lite_S00_AXI_inst/board_module/genblk1[949].cell_module/state_reg_2
+    SLICE_X6Y166         FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[949].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg4_reg[19]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[883].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.252ns  (logic 0.186ns (73.791%)  route 0.066ns (26.209%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y159         FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg4_reg[19]/C
+    SLICE_X4Y159         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  AXI_Lite_S00_AXI_inst/slv_reg4_reg[19]/Q
+                         net (fo=2, routed)           0.066     0.207    AXI_Lite_S00_AXI_inst/board_module/genblk1[884].cell_module/new_state[0]
+    SLICE_X5Y159         LUT5 (Prop_lut5_I0_O)        0.045     0.252 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[884].cell_module/state_i_1__882/O
+                         net (fo=1, routed)           0.000     0.252    AXI_Lite_S00_AXI_inst/board_module/genblk1[883].cell_module/state_reg_1
+    SLICE_X5Y159         FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[883].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg4_reg[27]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[891].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.252ns  (logic 0.186ns (73.791%)  route 0.066ns (26.209%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y164        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg4_reg[27]/C
+    SLICE_X22Y164        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  AXI_Lite_S00_AXI_inst/slv_reg4_reg[27]/Q
+                         net (fo=2, routed)           0.066     0.207    AXI_Lite_S00_AXI_inst/board_module/genblk1[892].cell_module/new_state[0]
+    SLICE_X23Y164        LUT5 (Prop_lut5_I0_O)        0.045     0.252 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[892].cell_module/state_i_1__890/O
+                         net (fo=1, routed)           0.000     0.252    AXI_Lite_S00_AXI_inst/board_module/genblk1[891].cell_module/state_reg_1
+    SLICE_X23Y164        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[891].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg29_reg[7]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[71].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.252ns  (logic 0.186ns (73.772%)  route 0.066ns (26.228%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y137        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg29_reg[7]/C
+    SLICE_X40Y137        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  AXI_Lite_S00_AXI_inst/slv_reg29_reg[7]/Q
+                         net (fo=2, routed)           0.066     0.207    AXI_Lite_S00_AXI_inst/board_module/genblk1[72].cell_module/new_state[0]
+    SLICE_X41Y137        LUT5 (Prop_lut5_I0_O)        0.045     0.252 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[72].cell_module/state_i_1__70/O
+                         net (fo=1, routed)           0.000     0.252    AXI_Lite_S00_AXI_inst/board_module/genblk1[71].cell_module/state_reg_2
+    SLICE_X41Y137        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[71].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AXI_Lite_S00_AXI_inst/slv_reg6_reg[25]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            AXI_Lite_S00_AXI_inst/board_module/genblk1[825].cell_module/state_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.252ns  (logic 0.186ns (73.772%)  route 0.066ns (26.228%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X18Y168        FDRE                         0.000     0.000 r  AXI_Lite_S00_AXI_inst/slv_reg6_reg[25]/C
+    SLICE_X18Y168        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  AXI_Lite_S00_AXI_inst/slv_reg6_reg[25]/Q
+                         net (fo=2, routed)           0.066     0.207    AXI_Lite_S00_AXI_inst/board_module/genblk1[826].cell_module/new_state[0]
+    SLICE_X19Y168        LUT5 (Prop_lut5_I0_O)        0.045     0.252 r  AXI_Lite_S00_AXI_inst/board_module/genblk1[826].cell_module/state_i_1__824/O
+                         net (fo=1, routed)           0.000     0.252    AXI_Lite_S00_AXI_inst/board_module/genblk1[825].cell_module/state_reg_1
+    SLICE_X19Y168        FDRE                                         r  AXI_Lite_S00_AXI_inst/board_module/genblk1[825].cell_module/state_reg/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
